@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Karar Yapıları - Lab3</h1>
+    <h2>Haftanın Günleri</h2>
+    <input placeholder="Bir Rakam Giriniz" type="text" id="day">
+    <button onclick="findDay()">Hangi gün?</button>
+    <p id="result"></p>
+
+    <script>
+        function findDay (){
+           let dayElement = document.getElementById('day').value;
+           let sonuc;
+           let showDay = document.getElementById('result');
+
+           if (dayElement == 1) {
+            sonuc = "Pazartesi";
+           } else if (dayElement == 2){
+            sonuc = "Salı";
+           }else if (dayElement == 3){
+            sonuc = "Çarşamba";
+           }else if (dayElement == 4){
+            sonuc = "Perşembe";
+           }else if (dayElement == 5){
+            sonuc = "Cuma";
+           }else if (dayElement == 6){
+            sonuc = "Cumartesi";
+           }else if (dayElement == 7){
+            sonuc = "Pazar";
+           }else{
+            result.innerHTML = "Geçersiz bir değer girdiniz! Lütfen tekrar deneyiniz..."
+            return;
+           }
+          result.innerHTML = sonuc + " günündesiniz";
+        }
+    </script>
+</body>
+</html>
